@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
 
 
-    <button class="btn btn-primary" (click)="tamano = tamano + 5">
+    <button class="btn btn-primary" (click)="tamano = tamanoPlus(5)">
       <i class="fa fa-plus"></i>
     </button>
 
@@ -30,6 +30,16 @@ export class NgStyleComponent implements OnInit {
       return this.tamano;
     } else {
       return this.tamano = this.tamano - numero;
+    }
+
+  } 
+
+  tamanoPlus( numero: number ) {
+
+    if ( this.tamano >= 30 ) {
+      return this.tamano;
+    } else {
+      return this.tamano = this.tamano + numero;
     }
 
   } 
